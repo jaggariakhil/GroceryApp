@@ -1,0 +1,33 @@
+<div class="container">
+<div class="row">
+    <div class="col-sm-6">
+        <form (ngSubmit)="onAdd(f)" #f="ngForm">
+            <div class="row">
+                <div class="col-sm-4">
+                    <input type="text" name="gname" form-group placeholder="gname" ngModel required >
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" name="quantity" form-group placeholder="quantity" [pattern]="'[1-9]+[0-9]*$'" ngModel required >
+                </div>
+                <div class="col-sm-4">
+                    <input type="text" name="price" form-group placeholder="price" [pattern]="'[1-9]+[0-9]*$'" ngModel required >
+                </div>
+            
+            </div>
+            <br>
+            <div class="row">
+                
+                    <div class="col-sm-5">
+                        <button class="btn btn-success" type="submit" [disabled]="f.invalid">{{btext}}</button>
+                    </div>
+                
+            </div>
+            
+            </form>
+    </div>
+</div>
+
+</div>
+<br>
+<app-glist></app-glist>
+

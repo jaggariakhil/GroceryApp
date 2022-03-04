@@ -1,0 +1,36 @@
+
+
+        <ul class="list-group" >
+
+
+            <a
+            class="list-group-item"
+            style="cursor: pointer"
+            *ngFor="let item of glist;let i=index"
+            (click)="onEdit(i)"
+            >
+            <div class="row"  >
+                <div class="col-sm-11">
+                    ({{item.gname}}) {{item.quantity}} {{item.price}}
+                </div>
+                <div class="col-sm-1">
+                    <button class="btn btn-danger" type="button" (click)="onDelete(i)" >X</button>
+            
+                </div>
+            </div>
+            </a>
+            <p *ngIf="count<=0"> No Items To Display</p>
+        </ul>
+  
+
+
+
+
+
+
+    
+
+    
+         
+
+
